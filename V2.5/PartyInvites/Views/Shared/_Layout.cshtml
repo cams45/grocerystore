@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - PartyInvites</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+
+    <header>
+        <h1><a href="/">Freshly's Invitation</a></h1>
+    </header>
+
+    <nav>
+        <a asp-action="Login">Login</a>
+        <a asp-action="AboutUs">About Us</a>
+        <a asp-action="News">News</a>
+        <a asp-action="FAQ">FAQs</a>
+        <a asp-action="Catalog">Catalog</a>
+        <a asp-action="Cart">Cart</a>
+        <a asp-action="orderConfirm">Order Confirm</a>
+        <a asp-action="OrderRetrive">Order Retrieve</a>
+    </nav>
+
+
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+
+
+    <!-- Footer -->12234
+
+    <footer class="w3-padding-64 w3-center w3-blue w3-xlarge">
+        <a href="https://www.facebook.com/publix/?rf=112606232087374" class="fa fa-facebook"></a>
+        <a href="https://www.instagram.com/Publix/" class="fa fa-instagram"></a>
+        <a href="https://twitter.com/Publix" class="fa fa-twitter"></a>
+        <a href="https://www.linkedin.com/company/publix-super-markets" class="fa fa-linkedin"></a>
+        <p class="w3-medium">
+            Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
+        </p>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+
+</body>
+</html>
+
+`

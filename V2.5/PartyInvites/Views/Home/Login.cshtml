@@ -1,0 +1,119 @@
+﻿@model PartyInvites.Models.GuestResponse
+
+
+
+@{
+
+    Layout = "/Views/Shared/_Layout.cshtml";
+
+}
+
+<div>
+
+    <br /><br />
+
+    <h2><strong>Welcome to Freshly's Invitation</strong></h2><br />
+
+</div>
+
+
+
+<style>
+
+
+
+    left-aligned-labels.css
+
+    fieldset.submit {
+        float: none;
+        width: auto;
+        border: 0 none #FFF;
+        padding-left: 12em;
+    }
+
+
+
+    div {
+        margin-bottom: 10px;
+    }
+
+
+
+    label {
+        display: inline-block;
+        width: 150px;
+        text-align: left;
+    }
+</style>
+
+
+
+
+
+
+
+<body>
+
+
+
+    <div>
+
+        <strong>Sign in to your profile</strong>
+
+        <br />
+
+    </div>
+
+
+
+    <form asp-action="Login" method="post">
+
+        <p>
+
+            <label asp-for="Email"> Email:</label>
+
+            <input asp-for="Email" />
+
+        </p>
+
+
+
+        <p>
+
+            <label asp-for="Password"> Password:</label>
+
+            <input asp-for="Password" />
+
+        </p>
+
+
+
+        <div>
+
+            <button type="submit">Confirm</button><br /><br />
+
+        </div>
+
+        <div>
+
+
+
+        </div>
+
+
+
+        <div><strong>Don't have a Profile?</strong></div>
+
+        <p>
+
+            <a asp-action="Profile" style="color: black">Create an account</a>
+
+        </p>
+
+
+
+        <img src="https://gatorgong.files.wordpress.com/2015/04/kroger-app-art-g6dl1s9v-103-kroger-app-clh-jpg.jpg " width="425" height="300" />
+
+    </form>
+
+</body>

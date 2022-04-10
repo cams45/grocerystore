@@ -1,0 +1,88 @@
+﻿<!--a@model IEnumerable<PartyInvites.Models.CartItem> -->
+@model PartyInvites.Models.CartItem
+@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+    double total = 0;
+    double extended;
+    int count = 0;
+}
+@foreach (PartyInvites.Models.CartItem r in CartItem.cartItems)
+{
+    count += r.Quantity;
+}
+
+    <div class="col-25">
+        <div class="container">
+            <h4>
+                Cart
+                <span class="price" style="color:black">
+                    <i class="fa fa-shopping-cart"></i>
+                    <b>@count</b>
+                </span>
+            </h4>
+            <table id="shoppingCart">
+                <thead>
+                    <tr>
+                        <th>Quantity</th>
+                        <th>ItemName</th>
+                        <th>Unit Price</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (PartyInvites.Models.CartItem r in CartItem.cartItems)
+                    {
+                        extended = Math.Round((r.Price * r.Quantity), 2);
+                        total += extended;
+                        <tr>
+                            <td>@r.Quantity</td>
+                            <td>@r.ItemName</td>
+                            <td>$@r.Price</td>
+                            <td>$@extended</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+            <hr>
+            <p>Total <span class="price" style="color:black"><b>$@Math.Round(total, 2)</b></span></p>
+            <form asp-action="OrderConfirm" method="post">
+                <input type="submit" value="Confirm Purchase" class="btn-cart">
+            </form>
+            <form asp-action="Catalog" method="post">
+                <input type="submit" value="Continue Shopping" class="btn-cart">
+            </form>
+
+
+
+            <form asp-action="Cart" method="post">
+                <br>
+                <cache.remove/>
+                <remove asp-for />
+                <button class="w3-button w3-bar-item">
+                    Add to cart
+                    <i class="fa fa-caret-down"></i>
+                </button>
+            </form>
+            </li>
+
+
+
+            <button>Remove all p elements</button>
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+

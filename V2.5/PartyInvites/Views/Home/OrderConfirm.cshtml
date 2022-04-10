@@ -1,0 +1,131 @@
+﻿@model PartyInvites.Models.PurchaseConfirm
+@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+    double total = 0;
+    double extended;
+    int count = 0;
+    int cartId = CartItem.orderNum();
+    
+}
+@foreach (PartyInvites.Models.CartItem r in CartItem.cartItems)
+{
+    count += r.Quantity;
+}
+
+<div class="row">
+    <div class="col-75">
+        <div class="container">
+            <form asp-action="OrderConfirmThanks" method="post">
+                <!--Change to asp-action and assign each field to the Model that can contain that data-->
+                <div asp-validation-summary ="All">
+        
+                    <div class="row">
+                        <div class="col-50">
+                            <h3>Billing Address</h3>
+                                <p>
+                                    <label asp-for="FullName"><i class="fa fa-user"></i> Full Name</label>
+                                    <input asp-for="FullName" placeholder="John M. Doe">
+                                 </p>
+                                 <p>
+                                    <label asp-for="Email"><i class="fa fa-envelope"></i> Email</label>
+                                    <input asp-for="Email" id="email" placeholder="john@example.com">
+                                 </p>
+                                 <label asp-for="Address"><i class="fa fa-address-card-o"></i> Address</label>
+                                 <input asp-for="Address" id="adr" placeholder="542 W. 15th Street">
+                                 <label asp-for="City"><i class="fa fa-institution"></i> City</label>
+                                <input id="city" asp-for="City" placeholder="New York">
+
+                                    <div class="row">
+                                        <div class="col-50">
+                                            <label asp-for="State">State</label>
+                                            <input id="state" asp-for="State" placeholder="NY">
+                                        </div>
+                                        <div class="col-50">
+                                            <label asp-for="Zip">Zip</label>
+                                                <input id="zip" asp-for="Zip" placeholder="10001">
+                                        </div>
+                                    </div>
+                        </div>
+                    
+                        <div class="col-50">
+                            <h3>Payment</h3>
+                            <label for="fname">Accepted Cards</label>
+                                <div class="icon-container">
+                                    <i class="fa fa-cc-visa" style="color:navy;"></i>
+                                    <i class="fa fa-cc-amex" style="color:blue;"></i>
+                                    <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                                    <i class="fa fa-cc-discover" style="color:orange;"></i>
+                                </div>
+                            <label asp-for="CardName">Name on Card</label>
+                            <input id="cname" asp-for="CardName" placeholder="John More Doe">
+                            <label asp-for="CardNumber">Credit card number</label>
+                            <input id="ccnum" asp-for="CardNumber" placeholder="1111-2222-3333-4444">
+                            <label asp-for="ExpMonth">Exp Month</label>
+                            <input id="expmonth" asp-for="ExpMonth" placeholder="September">
+
+                            <div class="row">
+                                <div class="col-50">
+                                    <label asp-for="ExpYear">Exp Year</label>
+                                    <input id="expyear" asp-for="ExpYear" placeholder="2018">
+                                </div>
+                                <div class="col-50">
+                                    <label asp-for="Cvv">CVV</label>
+                                    <input id="cvv" asp-for="Cvv" placeholder="352">
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                <label>
+                <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+                </label>
+        <!--<input asp-for="Purchased" value="true" type="hidden" />-->
+                <input type="submit" value="Continue to checkout" class="btn-cart">
+                </div>  
+            </form>
+        </div>
+    </div>
+
+    <div class="col-25">
+        <div class="container">
+            <h4>
+                Cart
+                <span class="price" style="color:black">
+                    <i class="fa fa-shopping-cart"></i>
+                    <b>@count</b>
+                </span>
+            </h4>
+            <table id="shoppingCart">
+                <thead>
+                    <tr>
+                        <th>Quantity</th>
+                        <th>ItemName</th>
+                        <th>Unit Price</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (PartyInvites.Models.CartItem r in CartItem.cartItems)
+                    {
+                        extended = Math.Round((r.Price * r.Quantity), 2);
+                        total += extended;
+                    <tr>
+                        <td>@r.Quantity</td>
+                        <td>@r.ItemName</td>
+                        <td>$@r.Price</td>
+                        <td>$@extended</td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+
+
+
+
+
+
+            <hr>
+            <p>Total <span class="price" style="color:black"><b>$@Math.Round(total, 2)</b></span></p>
+        </div>
+    </div>
+</div>

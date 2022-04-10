@@ -1,0 +1,348 @@
+﻿@model PartyInvites.Models.CartItem
+@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+
+<head>
+    <style>
+            .btn:hover {
+                background-color: #00ffff;
+            }
+
+    </style>
+</head>
+
+
+<div>Please search an item</div>
+
+
+    <p>
+        <label asp-for="Product"> Item:</label>
+        <input asp-for="Product" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name" />
+    </p>
+
+
+
+    <ul id="myUL" class="grid-list">
+        <li>
+            <a href="#">
+
+                Fruit<br>
+                <p><img src=" https://cdn.mos.cms.futurecdn.net/42E9as7NaTaAi4A6JcuFwG.jpg" alt="Random Name" width="100" height="100"></p>
+                Bananas<br>
+                $1.49 LB<br>
+                <br>
+            </a>
+            <br>
+            <form asp-action="Cart" method="post">
+                Qty: <input type="number" asp-for="Quantity" min="1" value="1" class="btn">
+                <br>
+                <input asp-for="Price" value="1.49" type="hidden" />
+                <input asp-for="ItemName" value="Bananas" type="hidden" />
+                <button class="w3-button w3-block" type="submit" style="width:90%">
+                    Add to cart
+                </button>
+            </form>
+        </li>
+
+
+
+
+
+
+
+        <li>
+            <a href="#">
+                Fruit<br>
+                <p><img src=" https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/half-of-orange-on-the-heap-of-oranges-royalty-free-image-1598525395.jpg" alt="Random Name" width="100" height="100"></p>
+                Oranges<br>
+                $1.49 LB<br><br>
+
+            </a>
+            <br>
+            <form asp-action="Cart" method="post">
+                Qty: <input type="number" asp-for="Quantity" min="1" value="1" class="btn-cart">
+                <br />
+                <input asp-for="Price" value="1.49" type="hidden" />
+                <input asp-for="ItemName" value="Oranges" type="hidden" />
+                <button class="w3-button w3-bar-item" type="submit">
+                    Add to cart
+                    <i class="fa fa-caret-down"></i>
+                </button>
+            </form>
+        </li>
+
+        <li>
+            <a href="#">
+                Vegetables<br>
+                <p><img src=" https://i.ndtvimg.com/mt/cooks/2014-11/carrots.jpg" alt="Random Name" width="100" height="100"></p>
+                Carrots<br>
+                $0.99 LB <br><br />
+
+            </a>
+            <br>
+            <form asp-action="Cart" method="post">
+                Qty: <input type="number" asp-for="Quantity" min="1" value="1" class="btn">                <br>
+                <input asp-for="Price" value="0.99" type="hidden" />
+                <input asp-for="ItemName" value="Carrots" type="hidden" />
+                <button class="w3-button w3-bar-item">
+                    Add to cart
+                    <i class="fa fa-caret-down"></i>
+                </button>
+            </form>
+        </li>
+
+
+
+        <li>
+            <a href="#">
+                Meats<br>
+                <p><img src=" https://embed.widencdn.net/img/beef/4zddc8i3wx/800x600px/Ranch%20Steak.psd?keep=c&u=7fueml" alt="Random Name" width="100" height="100"></p>
+                Steak<br>
+                $7.99 LB <br><br />
+
+            </a>
+            <br>
+            <form asp-action="Cart" method="post">
+                Qty: <input type="number" asp-for="Quantity" min="1" value="1" |>
+                <br>
+                <input asp-for="Price" value="7.99" type="hidden" />
+                <input asp-for="ItemName" value="Steak" type="hidden" />
+                <button class="w3-button w3-bar-item">
+                    Add to cart
+                    <i class="fa fa-caret-down"></i>
+                </button>
+            </form>
+        </li>
+
+        <li>
+            <a href="#">
+                Meats<br>
+                <p><img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5aGQFujyEIgnTDSV0cqJdPqzNid9GeoIaMg&usqp=CAU" alt="Random Name" width="100" height="100"></p>
+                Pork<br>
+                $3.99 LB <br><br />
+
+            </a>
+            <br>
+            <form asp-action="Cart" method="post">
+                Qty: <input type="number" asp-for="Quantity" min="1" value="1" |>
+                <br>
+                <input asp-for="Price" value="3.99" type="hidden" />
+                <input asp-for="ItemName" value="Pork" type="hidden" />
+                <button class="w3-button w3-bar-item">
+                    Add to cart
+                    <i class="fa fa-caret-down"></i>
+                </button>
+            </form>
+        </li>
+
+        <li>
+            <a href="#">
+                Meats<br>
+                <p><img src=" https://post.psychcentral.com/wp-content/uploads/2020/09/2375-Raw_Chicken-1296x728-header-1200x628.jpg" alt="Random Name" width="100" height="100"></p>
+                Chicken<br>
+                $4.99 LB <br><br />
+
+            </a>
+            <br>
+            <form asp-action="Cart" method="post">
+                Qty: <input type="number" asp-for="Quantity" min="1" value="1" |>
+                <br>
+                <input asp-for="Price" value="4.99" type="hidden" />
+                <input asp-for="ItemName" value="Chicken" type="hidden" />
+                <button class="w3-button w3-bar-item">
+                    Add to cart
+                    <i class="fa fa-caret-down"></i>
+                </button>
+            </form>
+        </li>
+
+
+        <li>
+            <a href="#">
+                Meats<br>
+                <p><img src=" https://previews.123rf.com/images/imagedb/imagedb1108/imagedb110815532/10239720-close-up-of-a-raw-fish.jpg" alt="Random Name" width="100" height="100"></p>
+                Fish<br>
+                $1.49 LB <br><br />
+
+            </a>
+            <br>
+            <form asp-action="Cart" method="post">
+                Qty: <input type="number" asp-for="Quantity" min="1" value="1" |>
+                <br>
+                <input asp-for="Price" value="1.49" type="hidden" />
+                <input asp-for="ItemName" value="Fish" type="hidden" />
+                <button class="w3-button w3-bar-item">
+                    Add to cart
+                    <i class="fa fa-caret-down"></i>
+                </button>
+            </form>
+        </li>
+
+        <li>
+            <a href="#">
+                Dairy<br>
+                <p><img src=" https://images.albertsons-media.com/is/image/ABS/960290545?$ecom-pdp-desktop$&defaultImage=Not_Available&defaultImage=Not_Available" alt="Random Name" width="100" height="100"></p>
+                Milk<br>
+                $1.29/Unit <br><br />
+
+            </a>
+            <br>
+            <form asp-action="Cart" method="post">
+                Qty: <input type="number" asp-for="Quantity" min="1" value="1" |>
+                <br>
+                <input asp-for="Price" value="1.99" type="hidden" />
+                <input asp-for="ItemName" value="Milk" type="hidden" />
+                <button class="w3-button w3-bar-item">
+                    Add to cart
+                    <i class="fa fa-caret-down"></i>
+                </button>
+            </form>
+        </li>
+
+        <li>
+            <a href="#">
+                Dairy<br>
+                <p><img src=" https://images-na.ssl-images-amazon.com/images/I/61GcEwvDa3L._SX569_PIbundle-6,TopRight,0,0_SX569SY427SH20_.jpg" alt="Random Name" width="100" height="100"></p>
+                Yogurt<br>
+                $0.49/Unit <br><br />
+
+            </a>
+            <br>
+            <form asp-action="Cart" method="post">
+                Qty: <input type="number" asp-for="Quantity" min="1" value="1" |>
+                <br>
+                <input asp-for="Price" value="0.49" type="hidden" />
+                <input asp-for="ItemName" value="Yogurt" type="hidden" />
+                <button class="w3-button w3-bar-item">
+                    Add to cart
+                    <i class="fa fa-caret-down"></i>
+                </button>
+            </form>
+        </li>
+
+        <li>
+            <a href="#">
+                Meat<br>
+                <p><img src=" https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F43%2F2019%2F10%2Fdozen-eggs-in-carton.png" alt="Random Name" width="100" height="100"></p>
+                Eggs<br>
+                $3.99/Dozen <br><br />
+            </a>
+            <br>
+            <form asp-action="Cart" method="post">
+                Qty: <input type="number" asp-for="Quantity" min="1" value="1" |>
+                <br>
+                <input asp-for="Price" value="3.99" type="hidden" />
+                <input asp-for="ItemName" value="Eggs" type="hidden" />
+                <button class="w3-button w3-bar-item">
+                    Add to cart
+                    <i class="fa fa-caret-down"></i>
+                </button>
+            </form>
+        </li>
+
+        <li>
+            <a href="#">
+                Bread<br>
+                <p><img src=" https://target.scene7.com/is/image/Target/GUEST_e58d112d-f202-4876-a4ee-a84197766255?wid=488&hei=488&fmt=pjpeg" alt="Random Name" width="100" height="100"></p>
+                Hot Dog Buns 6ct.<br>
+                $1.99 <br><br />
+
+            </a>
+            <br>
+            <form asp-action="Cart" method="post">
+                Qty: <input type="number" asp-for="Quantity" min="1" value="1" |>
+                <br>
+                <input asp-for="Price" value="1.99" type="hidden" />
+                <input asp-for="ItemName" value="Hot Dog Bunts 6ct." type="hidden" />
+                `      <button class="w3-button w3-bar-item">
+                    Add to cart
+                    <i class="fa fa-caret-down"></i>
+                </button>
+            </form>
+        </li>
+
+        <li>
+            <a href="#">
+                Bread<br>
+                <p><img src=" http://www.ndtv.com/cooks/images/bread%20%281%29.jpg" alt="Random Name" width="100" height="100"></p>
+                White Bread<br>
+                $2.99/Unit <br><br>
+
+            </a>
+            <br>
+            <form asp-action="Cart" method="post">
+                Qty: <input type="number" asp-for="Quantity" min="1" value="1" |>
+                <br>
+                <input asp-for="Price" value="1.99" type="hidden" />
+                <input asp-for="ItemName" value="White Bread" type="hidden" />
+                <button class="w3-button w3-bar-item">
+                    Add to cart
+                    <i class="fa fa-caret-down"></i>
+                </button>
+            </form>
+        </li>
+        <li>
+            <a href="#">
+                Bread<br>
+                <p><img src=" https://cdn.cdkitchen.com/recipes/images/2019/01/50428-8498-mx.jpg" alt="Random Name" width="100" height="100"></p>
+                Whole Wheat Bread<br>
+                $2.99/Unit <br>
+
+            </a>
+            <br>
+            <form asp-action="Cart" method="post">
+                Qty: <input type="number" asp-for="Quantity" min="1" value="1" |>
+                <br>
+                <input asp-for="Price" value="1.99" type="hidden" />
+                <input asp-for="ItemName" value="Whole Wheat Bread" type="hidden" />
+                <button class="w3-button w3-bar-item">
+                    Add to cart
+                    <i class="fa fa-caret-down"></i>
+                </button>
+            </form>
+        </li>
+
+        <li>
+            <a href="#">
+                Bread<br>
+                <p><img src=" https://images.heb.com/is/image/HEBGrocery/002174044" alt="Random Name" width="100" height="100"></p>
+                Multigrain Bread<br>
+                $2.99/Unit <br>
+
+            </a>
+            <br>
+            <form asp-action="Cart" method="post">
+                Qty: <input type="number" asp-for="Quantity" min="1" value="1" |>
+                <br>
+                <input asp-for="Price" value="2.99" type="hidden" />
+                <input asp-for="ItemName" value="Multigrain Bread" type="hidden" />
+                <button class="w3-button w3-bar-item">
+                    Add to cart
+                    <i class="fa fa-caret-down"></i>
+                </button>
+            </form>
+        </li>
+    </ul>
+
+    <script>
+        function myFunction() {
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myUL");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+

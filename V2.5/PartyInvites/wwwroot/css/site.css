@@ -1,0 +1,309 @@
+﻿
+body {
+    background-image: url('https://www.lux-review.com/wp-content/uploads/2020/12/grocery-shopping.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* The dropdown container */
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+    /* Dropdown button */
+    .dropdown .dropbtn {
+        font-size: 16px;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit; /* Important for vertical align on mobile phones */
+        margin: 0; /* Important for vertical align on mobile phones */
+    }
+
+    /* Add a red background color to navbar links on hover */
+    .navbar a:hover, .dropdown:hover .dropbtn {
+        background-color: red;
+    }
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+        /* Add a grey background color to dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+nav {
+    border: 1px solid black;
+    background-color: #777;
+    padding-top: 10px;
+    /* padding-right: 30px; */
+    padding-bottom: 20px;
+    /* padding-left: 80px; */
+    text-align: center;
+}
+
+    /* Links inside the navbar */
+    nav a {
+        display: inline-block;
+        font-size: 16px;
+        color: white;
+        /* text-align: center; */
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+footer {
+    background-color: #777;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    /*position:fixed;
+    bottom:0;*/
+    width: 100%;
+}
+
+header {
+    background-color: #666;
+    padding: 30px;
+    text-align: center;
+    /* font-size: 35px; */
+    color: white;
+}
+
+    header h1 {
+        margin: 0;
+    }
+
+    header a {
+        color: white;
+        text-decoration: none;
+    }
+
+main {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+rows {
+    border: 1px solid black;
+    background-color: blue;
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    padding-left: 80px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+/* The grid: Three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 50px;
+    text-align: center;
+    font-size: 25px;
+    cursor: pointer;
+    color: white;
+}
+
+.containerTab {
+    padding: 20px;
+    color: white;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Closable button inside the container tab */
+.closebtn {
+    float: right;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+div.fixed {
+    position: fixed;
+    width: 50%;
+    bottom: 10px;
+    border: 3px solid #8AC007;
+}
+
+#myUL {
+    list-style-type: none;
+}
+
+    #myUL li {
+        width: 100%;
+        background-color: white;
+        border-bottom: 2px solid #cccccc;
+        padding: 2em;
+    }
+
+.grid-list {
+    width: 100px;
+    /* height: 100px; */
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+}
+
+.shopping-cart {
+    width: 700px;
+    height: 400px;
+    margin: 50px auto;
+    background: #00ffff;
+    box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: -webkit-flex; /* Chrome */
+    display: flex;
+    -webkit-flex-wrap: wrap; /* Chrome */
+    flex-wrap: wrap;
+    margin: 0 -16px;
+}
+
+.col-25 {
+    -webkit-flex: 25%; /* Chrome */
+    flex: 25%;
+}
+
+.col-50 {
+    -webkit-flex: 50%; /* Chrome */
+    flex: 50%;
+}
+
+.col-75 {
+    -webkit-flex: 75%; /* Chrome */
+    flex: 75%;
+}
+
+.col-75 {
+    padding: 0 16px;
+}
+
+.container {
+    background-color: #f2f2f2;
+    padding: 5px 20px 15px 20px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+}
+/*
+#input[type=text] {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+    Used for Order Confirmation*/
+label {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.icon-container {
+    margin-bottom: 20px;
+    padding: 7px 0;
+    font-size: 24px;
+}
+/*color of cart button*/
+.btn-cart {
+    background-color: #ddd;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+    .btn-cart:hover {
+        background-color: #69da29;
+    }
+
+span.price {
+    float: right;
+    color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+    .row {
+        flex-direction: column-reverse;
+    }
+
+    .col-25 {
+        margin-bottom: 20px;
+    }
+}
+/*CSS form shopping cart */
+#shoppingCart {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#shoppingCart td, #shoppingCart th {
+        border: 1px solid #ddd;
+        padding: 4px;
+}
+#shoppingCart th {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    text-align: center;
+    background-color: #04AA6D;
+    color: white;
+}
+/*CSS for OrderRetrieve*/
+.history-page {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+}
+.history-page__title {
+    font-size: large;
+}

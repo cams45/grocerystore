@@ -1,0 +1,54 @@
+﻿@model PartyInvites.Models.GuestResponse
+@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+<div>
+    <br /><br />
+    <h2><strong>Welcome to Freshly's Invitation</strong></h2><br />
+</div>
+            Create your profile<br />
+
+                                   <form asp-action="Profile" method="post">
+                                       <p>
+                                           <label asp-for="Email"> Email:</label>
+                                           <input asp-for="Email" />
+                                       </p>
+
+                                       <p>
+                                           <label asp-for="Password"> Password:</label>
+                                           <input asp-for="Password" />
+                                       </p>
+
+                                       <p>
+                                           <label asp-for="FirstName"> First Name:</label>
+                                           <input asp-for="FirstName" />
+                                       </p>
+                                       <p>
+                                           <label asp-for="LastName"> Last Name:</label>
+                                           <input asp-for="LastName" />
+                                       </p>
+                                       <p>
+                                           <label asp-for="StreetAddress"> Street Address:</label>
+                                           <input asp-for="StreetAddress" />
+                                       </p>
+                                       <p>
+                                           <label asp-for="City"> City:</label>
+                                           <input asp-for="City" />
+                                       </p>
+                                       <p>
+                                           <label asp-for="State"> State:</label>
+                                           <input asp-for="State" />
+                                       </p>
+                                       <p>
+                                           <label asp-for="Zip"> Zip:</label>
+                                           <input asp-for="Zip" />
+                                       </p>
+                                       <p>
+                                           <label asp-for="PhoneNumber"> Phone Number:</label>
+                                           <input asp-for="PhoneNumber" />
+                                       </p>
+
+                                       <button type="submit">Create a Profile</button>
+
+                                   </form>
+
