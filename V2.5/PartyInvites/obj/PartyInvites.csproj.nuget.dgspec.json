@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\n01407405\\Desktop\\V2.5\\PartyInvites\\PartyInvites.csproj": {}
+    "C:\\Users\\camer\\Desktop\\project final\\V2.5\\PartyInvites\\PartyInvites.csproj": {}
   },
   "projects": {
-    "C:\\Users\\n01407405\\Desktop\\V2.5\\PartyInvites\\PartyInvites.csproj": {
+    "C:\\Users\\camer\\Desktop\\project final\\V2.5\\PartyInvites\\PartyInvites.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\n01407405\\Desktop\\V2.5\\PartyInvites\\PartyInvites.csproj",
+        "projectUniqueName": "C:\\Users\\camer\\Desktop\\project final\\V2.5\\PartyInvites\\PartyInvites.csproj",
         "projectName": "PartyInvites",
-        "projectPath": "C:\\Users\\n01407405\\Desktop\\V2.5\\PartyInvites\\PartyInvites.csproj",
-        "packagesPath": "C:\\Users\\n01407405\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\n01407405\\Desktop\\V2.5\\PartyInvites\\obj\\",
+        "projectPath": "C:\\Users\\camer\\Desktop\\project final\\V2.5\\PartyInvites\\PartyInvites.csproj",
+        "packagesPath": "C:\\Users\\camer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\camer\\Desktop\\project final\\V2.5\\PartyInvites\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\n01407405\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\camer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,8 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://packagesource": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
